@@ -15,8 +15,16 @@
         "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v6/spiffs-wemos-s3-mini.bin",
         "filesystem_sha256": "71cd35abd55af195bda78f764e487c720e3422f2a119574f0270c43896878a2f",
         "filesystem_size": 2031616
+      },
+      "esp32-s3-headless": {
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v6/firmware-esp32-s3-headless.bin",
+        "sha256": "f2b24d8c6315e666bcbf639a01a7f7a61f50c7078ac71d802e2a9b67bd356270",
+        "size": 1032560,
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v6/spiffs-esp32-s3-headless.bin",
+        "filesystem_sha256": "71cd35abd55af195bda78f764e487c720e3422f2a119574f0270c43896878a2f",
+        "filesystem_size": 2031616
       }
     },
-    "changelog": "FW6+FS4 / EVO-104 portage initial — pipeline OTA pull intégré (FW + FS via esp_partition_write direct), recovery mode page PROGMEM, modal UX moins anxiogène (label inline rebooting, striped+animated bar), pollUntilReady strict 60s, fix burger iPhone (wg-loader pointer-events:none). Skip self-proxy : le proxy ne se proxifie pas lui-même, download HTTPS direct toujours. Variante esp32-s3-headless à publier ultérieurement."
+    "changelog": "FW6+FS4 / EVO-104 portage initial — pipeline OTA pull intégré (FW + FS via esp_partition_write direct), recovery mode page PROGMEM, modal UX moins anxiogène (label inline rebooting, striped+animated bar), pollUntilReady strict 60s, fix burger iPhone (wg-loader pointer-events:none). Skip self-proxy : le proxy ne se proxifie pas lui-même, download HTTPS direct toujours. 2 variantes publiées : wemos-s3-mini et esp32-s3-headless (binaires firmware distincts mais SPIFFS identique entre les 2)."
   }
 }
