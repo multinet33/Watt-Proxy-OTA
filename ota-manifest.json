@@ -3,9 +3,9 @@
   "_doc": "Format : pour chaque firmware (proxy), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "proxy": {
     "version": "2026.04",
-    "build_fw": 22,
-    "build_fs": 14,
-    "released_at": "2026-05-06T20:27:53Z",
+    "build_fw": 24,
+    "build_fs": 16,
+    "released_at": "2026-05-06T20:52:50Z",
     "envs": {
       "wemos-s3-mini": {
         "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v22/firmware-wemos-s3-mini.bin",
@@ -16,14 +16,14 @@
         "filesystem_size": 2031616
       },
       "esp32-s3-headless": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v18/firmware-esp32-s3-headless.bin",
-        "sha256": "ae20f2514df419985838d69cfd20eff627ad70d90d43f4d1dd2d57649fb02f53",
-        "size": 1054864,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v18/spiffs-esp32-s3-headless.bin",
-        "filesystem_sha256": "ca9a95581dfa6953280bf4178652a6b6c056d55d8e280638a106b72a020266d7",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v24/firmware-esp32-s3-headless.bin",
+        "sha256": "a86987b0b85bd19e4d7c6a9c65d0dfacddd51ef319a8e4ec0aed1a33fa89dc92",
+        "size": 1055632,
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v24/spiffs-esp32-s3-headless.bin",
+        "filesystem_sha256": "d44e135c3a44d8085d3be5c5f5615a1deacaa4a091366d85c8de8348ab0353b6",
         "filesystem_size": 2031616
       }
     },
-    "changelog": "FW22+FS14 : Bump +1"
+    "changelog": "FW24+FS16 : Bump +1"
   }
 }
