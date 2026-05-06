@@ -3,27 +3,27 @@
   "_doc": "Format : pour chaque firmware (proxy), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "proxy": {
     "version": "2026.05",
-    "build_fw": 10,
+    "build_fw": 11,
     "build_fs": 8,
-    "released_at": "2026-05-06T14:40:00Z",
+    "released_at": "2026-05-06T15:18:00Z",
     "envs": {
       "wemos-s3-mini": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v10/proxy-wemos-firmware.bin",
-        "sha256": "72a9184b9c7ec7c575f11408e906800e2f156f64b4cdb687aa013fa533bccadd",
-        "size": 1045920,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v10/proxy-wemos-spiffs.bin",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v11/proxy-wemos-firmware.bin",
+        "sha256": "9f40187f8ac2af63bc1324f1ecd994d4d5a29e52ac213eac986f4953f6be4bee",
+        "size": 1049616,
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v11/proxy-wemos-spiffs.bin",
         "filesystem_sha256": "89eb658739964b8fe5ee28bab9d267847eb5703019be062ddb2302d90c275bae",
         "filesystem_size": 2031616
       },
       "esp32-s3-headless": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v10/proxy-headless-firmware.bin",
-        "sha256": "7d35441ef055ebf00e682b8f363d2cc2379d17485a593d71bff737c87054f8da",
-        "size": 1045920,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v10/proxy-headless-spiffs.bin",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v11/proxy-headless-firmware.bin",
+        "sha256": "d5a809c1328e6fb3c8429d2b3e58a07128215cf383bdb816aa03429e3eb01d3f",
+        "size": 1049616,
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v11/proxy-headless-spiffs.bin",
         "filesystem_sha256": "89eb658739964b8fe5ee28bab9d267847eb5703019be062ddb2302d90c275bae",
         "filesystem_size": 2031616
       }
     },
-    "changelog": "FW10+FS8 — Mega update 2026-05-06. Modale OTA refondue (anneau + countdown 180s + seenStarted/versionBumped). Fix critique check OTA FS via /fs_build SPIFFS marker. nothingToDo log clarifié. chain(0) bootloader sur index.html (anti burst LwIP cache-clear)."
+    "changelog": "FW11 — Nouveau endpoint GET /proxy/download?url=<urlencoded> qui pipe un binaire HTTPS distant en HTTP chunked sans buffer JSON. Permet aux clients faible-heap (sensors WROOM32) de récupérer FW/FS sans handshake TLS local. Utilisé par sensors FW37+ si Configuration → Proxy HTTPS activée."
   }
 }
