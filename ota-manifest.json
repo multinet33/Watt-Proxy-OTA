@@ -5,7 +5,7 @@
     "version": "2026.04",
     "build_fw": 17,
     "build_fs": 11,
-    "released_at": "2026-05-06T17:02:55Z",
+    "released_at": "2026-05-06T17:04:07Z",
     "envs": {
       "wemos-s3-mini": {
         "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v15/proxy-wemos-firmware.bin",
