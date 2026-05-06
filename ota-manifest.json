@@ -3,27 +3,27 @@
   "_doc": "Format : pour chaque firmware (proxy), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "proxy": {
     "version": "2026.05",
-    "build_fw": 14,
+    "build_fw": 15,
     "build_fs": 11,
-    "released_at": "2026-05-06T15:54:00Z",
+    "released_at": "2026-05-06T16:08:00Z",
     "envs": {
       "wemos-s3-mini": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v14/proxy-wemos-firmware.bin",
-        "sha256": "5518c9dad60e0190e27aa1f0a2efd443c84e1616a7f8c4c5ea50f2d5c01be0cf",
-        "size": 1049616,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v14/proxy-wemos-spiffs.bin",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v15/proxy-wemos-firmware.bin",
+        "sha256": "e114ac731792813ed7477353e9be0702f3c9ddb6b561fb288c66eb34ada224c9",
+        "size": 1052960,
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v15/proxy-wemos-spiffs.bin",
         "filesystem_sha256": "ca9a95581dfa6953280bf4178652a6b6c056d55d8e280638a106b72a020266d7",
         "filesystem_size": 2031616
       },
       "esp32-s3-headless": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v14/proxy-headless-firmware.bin",
-        "sha256": "8e8af7da1e5a2b00ba0a6db5e1fa4286733d9296105c4ac80912e3daebe7622a",
-        "size": 1049616,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v14/proxy-headless-spiffs.bin",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v15/proxy-headless-firmware.bin",
+        "sha256": "83c1f853002677f4983c4ee1dff8cdbc849b3f4a20350f60835a7d57cad2eed2",
+        "size": 1052976,
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v15/proxy-headless-spiffs.bin",
         "filesystem_sha256": "ca9a95581dfa6953280bf4178652a6b6c056d55d8e280638a106b72a020266d7",
         "filesystem_size": 2031616
       }
     },
-    "changelog": "FW14+FS11 — Card Sécurité : hosts whitelist par défaut + custom rendus 1 par ligne (<ul>/<li> au lieu de la string CSV qui débordait). Layout label-au-dessus + liste verticale."
+    "changelog": "FW15+FS11 — Refonte v2 de /proxy/download. Pattern task FreeRTOS dédiée + StreamBuffer 8 KB. Le callback chunked drain le buffer sans bloquer AsyncTCP (timeout 2s+8s). Fix Wrong Magic Byte observé côté sensors en routage proxy. FS11 inchangé."
   }
 }
