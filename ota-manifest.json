@@ -3,27 +3,27 @@
   "_doc": "Format : pour chaque firmware (proxy), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "proxy": {
     "version": "2026.05",
-    "build_fw": 13,
-    "build_fs": 10,
-    "released_at": "2026-05-06T15:48:00Z",
+    "build_fw": 14,
+    "build_fs": 11,
+    "released_at": "2026-05-06T15:54:00Z",
     "envs": {
       "wemos-s3-mini": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v13/proxy-wemos-firmware.bin",
-        "sha256": "e822aaaccc58feea8af01c4326cc1b690a53643e2d5882296374e318ff4dc007",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v14/proxy-wemos-firmware.bin",
+        "sha256": "5518c9dad60e0190e27aa1f0a2efd443c84e1616a7f8c4c5ea50f2d5c01be0cf",
         "size": 1049616,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v13/proxy-wemos-spiffs.bin",
-        "filesystem_sha256": "d8a8ca052a2596c6c2763ca79afe448ee0d562e768fb248bbfbe680ce4b78a0d",
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v14/proxy-wemos-spiffs.bin",
+        "filesystem_sha256": "ca9a95581dfa6953280bf4178652a6b6c056d55d8e280638a106b72a020266d7",
         "filesystem_size": 2031616
       },
       "esp32-s3-headless": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v13/proxy-headless-firmware.bin",
-        "sha256": "fd4de6fe82b9c4bbef9ef71046b38f7cd77d09107684b278a7c8a6b3cd2485a9",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v14/proxy-headless-firmware.bin",
+        "sha256": "8e8af7da1e5a2b00ba0a6db5e1fa4286733d9296105c4ac80912e3daebe7622a",
         "size": 1049616,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v13/proxy-headless-spiffs.bin",
-        "filesystem_sha256": "d8a8ca052a2596c6c2763ca79afe448ee0d562e768fb248bbfbe680ce4b78a0d",
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v14/proxy-headless-spiffs.bin",
+        "filesystem_sha256": "ca9a95581dfa6953280bf4178652a6b6c056d55d8e280638a106b72a020266d7",
         "filesystem_size": 2031616
       }
     },
-    "changelog": "FW13+FS10 — CSS grille refondue : repeat(auto-fit, minmax(320px, 1fr)) + grid-auto-flow row dense + .card en flex-column. Élimine l'asymétrie observée (grandes cards à gauche, petites à droite). Sur écrans larges, passage en 3 colonnes auto."
+    "changelog": "FW14+FS11 — Card Sécurité : hosts whitelist par défaut + custom rendus 1 par ligne (<ul>/<li> au lieu de la string CSV qui débordait). Layout label-au-dessus + liste verticale."
   }
 }
