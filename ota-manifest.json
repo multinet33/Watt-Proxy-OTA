@@ -3,28 +3,27 @@
   "_doc": "Format : pour chaque firmware (proxy), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "proxy": {
     "version": "2026.05",
-    "_test_phase_note": "build_fw=9999 et build_fs=9999 sentinelles pendant la phase de test EVO-104 portage. Les binaires pointés sont FW6/FS4 commercial wemos-s3-mini.",
-    "build_fw": 9999,
-    "build_fs": 9999,
-    "released_at": "2026-05-05T08:00:00Z",
+    "build_fw": 10,
+    "build_fs": 8,
+    "released_at": "2026-05-06T14:40:00Z",
     "envs": {
       "wemos-s3-mini": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v6/firmware-wemos-s3-mini.bin",
-        "sha256": "bbcdc78479efb3fc8857ab2515ee9f59bd0d2fdb6af23b2c1b1445ca5a71f83a",
-        "size": 1032544,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v6/spiffs-wemos-s3-mini.bin",
-        "filesystem_sha256": "71cd35abd55af195bda78f764e487c720e3422f2a119574f0270c43896878a2f",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v10/proxy-wemos-firmware.bin",
+        "sha256": "72a9184b9c7ec7c575f11408e906800e2f156f64b4cdb687aa013fa533bccadd",
+        "size": 1045920,
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v10/proxy-wemos-spiffs.bin",
+        "filesystem_sha256": "89eb658739964b8fe5ee28bab9d267847eb5703019be062ddb2302d90c275bae",
         "filesystem_size": 2031616
       },
       "esp32-s3-headless": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v6/firmware-esp32-s3-headless.bin",
-        "sha256": "f2b24d8c6315e666bcbf639a01a7f7a61f50c7078ac71d802e2a9b67bd356270",
-        "size": 1032560,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v6/spiffs-esp32-s3-headless.bin",
-        "filesystem_sha256": "71cd35abd55af195bda78f764e487c720e3422f2a119574f0270c43896878a2f",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v10/proxy-headless-firmware.bin",
+        "sha256": "7d35441ef055ebf00e682b8f363d2cc2379d17485a593d71bff737c87054f8da",
+        "size": 1045920,
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v10/proxy-headless-spiffs.bin",
+        "filesystem_sha256": "89eb658739964b8fe5ee28bab9d267847eb5703019be062ddb2302d90c275bae",
         "filesystem_size": 2031616
       }
     },
-    "changelog": "FW6+FS4 / EVO-104 portage initial — pipeline OTA pull intégré (FW + FS via esp_partition_write direct), recovery mode page PROGMEM, modal UX moins anxiogène (label inline rebooting, striped+animated bar), pollUntilReady strict 60s, fix burger iPhone (wg-loader pointer-events:none). Skip self-proxy : le proxy ne se proxifie pas lui-même, download HTTPS direct toujours. 2 variantes publiées : wemos-s3-mini et esp32-s3-headless (binaires firmware distincts mais SPIFFS identique entre les 2)."
+    "changelog": "FW10+FS8 — Mega update 2026-05-06. Modale OTA refondue (anneau + countdown 180s + seenStarted/versionBumped). Fix critique check OTA FS via /fs_build SPIFFS marker. nothingToDo log clarifié. chain(0) bootloader sur index.html (anti burst LwIP cache-clear)."
   }
 }
