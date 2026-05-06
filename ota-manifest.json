@@ -3,27 +3,27 @@
   "_doc": "Format : pour chaque firmware (proxy), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "proxy": {
     "version": "2026.05",
-    "build_fw": 12,
-    "build_fs": 9,
-    "released_at": "2026-05-06T15:35:00Z",
+    "build_fw": 13,
+    "build_fs": 10,
+    "released_at": "2026-05-06T15:48:00Z",
     "envs": {
       "wemos-s3-mini": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v12/proxy-wemos-firmware.bin",
-        "sha256": "a9997ffb5151a79a07326fe56f8b0c6bda05649dc3fab763d708f6622def0759",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v13/proxy-wemos-firmware.bin",
+        "sha256": "e822aaaccc58feea8af01c4326cc1b690a53643e2d5882296374e318ff4dc007",
         "size": 1049616,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v12/proxy-wemos-spiffs.bin",
-        "filesystem_sha256": "19ee7df26d58a014000ef6e444b0207e1a34b5e1720ad561997ccb5a64808f6d",
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v13/proxy-wemos-spiffs.bin",
+        "filesystem_sha256": "d8a8ca052a2596c6c2763ca79afe448ee0d562e768fb248bbfbe680ce4b78a0d",
         "filesystem_size": 2031616
       },
       "esp32-s3-headless": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v12/proxy-headless-firmware.bin",
-        "sha256": "dfe3548ac25a458f919b0e266197c2ef41419c2fa410e1fc0b2efa33cbbac6d6",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v13/proxy-headless-firmware.bin",
+        "sha256": "fd4de6fe82b9c4bbef9ef71046b38f7cd77d09107684b278a7c8a6b3cd2485a9",
         "size": 1049616,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v12/proxy-headless-spiffs.bin",
-        "filesystem_sha256": "19ee7df26d58a014000ef6e444b0207e1a34b5e1720ad561997ccb5a64808f6d",
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v13/proxy-headless-spiffs.bin",
+        "filesystem_sha256": "d8a8ca052a2596c6c2763ca79afe448ee0d562e768fb248bbfbe680ce4b78a0d",
         "filesystem_size": 2031616
       }
     },
-    "changelog": "FW12+FS9 — Modale OTA alignée watt-sensors info.html (parité guardian FS257/264/265/271). Bloc JS refait avec helpers _otaPollUntilReady / _otaShowState / _otaCheckMsg / _otaProceedCheck / _otaOnCheckDone / _otaOnCheckFail. otaApply : signaux versionBumped (AND need_fw/need_fs) + seenPhase2 90s + fallback 120s identiques au sensors. Switch d'état via style.display='block' (parité visuelle stricte) au lieu de classList .active."
+    "changelog": "FW13+FS10 — CSS grille refondue : repeat(auto-fit, minmax(320px, 1fr)) + grid-auto-flow row dense + .card en flex-column. Élimine l'asymétrie observée (grandes cards à gauche, petites à droite). Sur écrans larges, passage en 3 colonnes auto."
   }
 }
