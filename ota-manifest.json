@@ -2,10 +2,10 @@
   "_comment": "Watt-Proxy OTA pull manifest. Lu par le firmware Watt-Proxy via raw.githubusercontent.com. SHA-256 = hash du firmware.bin sortie de pio run. Le proxy ne se proxifie PAS lui-même : download FW/FS toujours HTTPS direct.",
   "_doc": "Format : pour chaque firmware (proxy), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "proxy": {
-    "version": "2026.05",
-    "build_fw": 15,
+    "version": "2026.04",
+    "build_fw": 16,
     "build_fs": 11,
-    "released_at": "2026-05-06T16:08:00Z",
+    "released_at": "2026-05-06T16:02:41Z",
     "envs": {
       "wemos-s3-mini": {
         "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v15/proxy-wemos-firmware.bin",
@@ -16,14 +16,14 @@
         "filesystem_size": 2031616
       },
       "esp32-s3-headless": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v15/proxy-headless-firmware.bin",
-        "sha256": "83c1f853002677f4983c4ee1dff8cdbc849b3f4a20350f60835a7d57cad2eed2",
-        "size": 1052976,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v15/proxy-headless-spiffs.bin",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v16/firmware-esp32-s3-headless.bin",
+        "sha256": "2380a239a7fa3d0ab614c92876fc8b51f2cea3332b4e8cb0fa3e1be10a982169",
+        "size": 1053344,
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v16/spiffs-esp32-s3-headless.bin",
         "filesystem_sha256": "ca9a95581dfa6953280bf4178652a6b6c056d55d8e280638a106b72a020266d7",
         "filesystem_size": 2031616
       }
     },
-    "changelog": "FW15+FS11 — Refonte v2 de /proxy/download. Pattern task FreeRTOS dédiée + StreamBuffer 8 KB. Le callback chunked drain le buffer sans bloquer AsyncTCP (timeout 2s+8s). Fix Wrong Magic Byte observé côté sensors en routage proxy. FS11 inchangé."
+    "changelog": "FW16 — Fix réel \"Wrong Magic Byte\" côté sensors lors du\n  download OTA via proxy."
   }
 }
