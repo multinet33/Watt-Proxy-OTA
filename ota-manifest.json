@@ -3,27 +3,27 @@
   "_doc": "Format : pour chaque firmware (proxy), lister les envs supportés avec leur firmware_url GitHub Release + sha256 + size. filesystem_url/sha/size optionnels par env.",
   "proxy": {
     "version": "2026.05",
-    "build_fw": 11,
-    "build_fs": 8,
-    "released_at": "2026-05-06T15:18:00Z",
+    "build_fw": 12,
+    "build_fs": 9,
+    "released_at": "2026-05-06T15:35:00Z",
     "envs": {
       "wemos-s3-mini": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v11/proxy-wemos-firmware.bin",
-        "sha256": "9f40187f8ac2af63bc1324f1ecd994d4d5a29e52ac213eac986f4953f6be4bee",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v12/proxy-wemos-firmware.bin",
+        "sha256": "a9997ffb5151a79a07326fe56f8b0c6bda05649dc3fab763d708f6622def0759",
         "size": 1049616,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v11/proxy-wemos-spiffs.bin",
-        "filesystem_sha256": "89eb658739964b8fe5ee28bab9d267847eb5703019be062ddb2302d90c275bae",
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v12/proxy-wemos-spiffs.bin",
+        "filesystem_sha256": "19ee7df26d58a014000ef6e444b0207e1a34b5e1720ad561997ccb5a64808f6d",
         "filesystem_size": 2031616
       },
       "esp32-s3-headless": {
-        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v11/proxy-headless-firmware.bin",
-        "sha256": "d5a809c1328e6fb3c8429d2b3e58a07128215cf383bdb816aa03429e3eb01d3f",
+        "firmware_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v12/proxy-headless-firmware.bin",
+        "sha256": "dfe3548ac25a458f919b0e266197c2ef41419c2fa410e1fc0b2efa33cbbac6d6",
         "size": 1049616,
-        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v11/proxy-headless-spiffs.bin",
-        "filesystem_sha256": "89eb658739964b8fe5ee28bab9d267847eb5703019be062ddb2302d90c275bae",
+        "filesystem_url": "https://github.com/multinet33/Watt-Proxy-OTA/releases/download/v12/proxy-headless-spiffs.bin",
+        "filesystem_sha256": "19ee7df26d58a014000ef6e444b0207e1a34b5e1720ad561997ccb5a64808f6d",
         "filesystem_size": 2031616
       }
     },
-    "changelog": "FW11 — Nouveau endpoint GET /proxy/download?url=<urlencoded> qui pipe un binaire HTTPS distant en HTTP chunked sans buffer JSON. Permet aux clients faible-heap (sensors WROOM32) de récupérer FW/FS sans handshake TLS local. Utilisé par sensors FW37+ si Configuration → Proxy HTTPS activée."
+    "changelog": "FW12+FS9 — Modale OTA alignée watt-sensors info.html (parité guardian FS257/264/265/271). Bloc JS refait avec helpers _otaPollUntilReady / _otaShowState / _otaCheckMsg / _otaProceedCheck / _otaOnCheckDone / _otaOnCheckFail. otaApply : signaux versionBumped (AND need_fw/need_fs) + seenPhase2 90s + fallback 120s identiques au sensors. Switch d'état via style.display='block' (parité visuelle stricte) au lieu de classList .active."
   }
 }
